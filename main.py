@@ -16,7 +16,7 @@ user_dtb={
 
 @app.post("/login")
 def login (user: LoginUser):
-    if user==user_dtb["email"] and user.contra ==user_dtb["contra"]:
+    if user.email==user_dtb["email"] and user.contra ==user_dtb["contra"]:
         return {"mensaje":"Login exitoso"}
     else:
         return {"mensaje": "Login ni exitoso"}
